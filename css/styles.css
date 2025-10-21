@@ -1,3 +1,7 @@
+:root {
+    --fondo: rgb(73, 73, 119);
+}
+
 * {
     margin:0;
     padding: 0;
@@ -7,16 +11,27 @@
 main {
     background: linear-gradient(
         black 2%,
-        rgb(73, 73, 119) 40% 60%,
+        var(--fondo) 40% 60%,
         black),
-        rgb(73, 73, 119) ;
+        var(--fondo);
     color: rgb(224, 223, 223);
-    padding: 35px;
+    padding: 15px;
     padding-left: 15%;
     padding-right: 15%;
     display: flex;
     flex-direction: column;
 
+}
+@media (max-width: 1024px) {
+    
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 7px;
+    padding-left: 8%;
+    padding-right: 8%;
+    }    
 }
 
 .section-intro {    
@@ -51,7 +66,8 @@ main {
 }
 .acerca-de-mi img {
     float: right;
-    margin-inline-start: 25px;
+    margin-inline-start: 10px;
+    margin-block: 7px;
     width: 25vw;
     max-width: 250px;
     height: fit-content;
@@ -62,18 +78,6 @@ main {
 .acerca-de-mi p {
     font-size: larger;
     padding-block: 10px ;
-}
-
-@media (max-width: 1024px) {
-    .acerca-de-mi {
-        background-color: burlywood;
-    }
-}
-
-@media (max-width: 480px) {
-    .acerca-de-mi {
-        background-color: brown;
-    }
 }
 
 .section-contacto {
