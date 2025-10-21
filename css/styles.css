@@ -45,21 +45,39 @@ main {
     justify-content: space-between;
     padding-block-end: 100px;   
 }
-.acerca-de-mi-izq {
+.acerca-de-mi {
     margin-block-start: 25px;
-    padding-inline: 10px;
+    padding-inline: 20px;
     padding-block: 15px;
     background-color: rgb(43, 43, 43);
-    border: solid 2px rgb(111, 111, 177);
+    border: solid 3px rgb(111, 111, 177);
     border-radius: 10px;
-    height: 5rem;
-    width: 40vw ;
+    width: 100% ;
+}
+.acerca-de-mi p {
+    font-size: larger;
+    padding-block: 10px;
 }
 
-.acerca-de-mi-der img {
+.acerca-de-mi img {
+    margin-inline-start: 25px;
     width: 25vw;
-    height: auto;
+    max-width: 250px;
+    height: fit-content;
+    border: solid 2px rgb(224, 223, 223);
     border-radius: 15px;    
+}
+
+@media (max-width: 1024px) {
+    .acerca-de-mi {
+        background-color: burlywood;
+    }
+}
+
+@media (max-width: 480px) {
+    .acerca-de-mi {
+        background-color: brown;
+    }
 }
 
 .section-contacto {
