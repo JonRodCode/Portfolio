@@ -1,7 +1,8 @@
 :root {
     --fondo: #3d2b6c;
     --fondo-box: #232b36;
-    --borde-box: #7856a8;
+    --fondo-box2: #674892;
+    --borde-box: #7777df;
     --texto-general: rgb(214, 214, 214);
 }
 
@@ -52,11 +53,6 @@ main {
 
 .proyectos {
     margin-block: 25px;
-    padding-inline: 20px;
-    padding-block: 15px;
-    background-color: var(--fondo-box);
-    border: solid 3px var(--borde-box);
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -67,13 +63,16 @@ main {
 .proyecto {
     padding-block: 10px ;
     padding-inline: 10px;
-    background-color: var(--borde-box);
-    border: solid 3px var(--texto-general);
+    background: linear-gradient(145deg, var(--fondo-box2), var(--fondo-box));
+    border: solid 3px #7777df;
     border-radius: 10px;
-    color: black;
     font-size: larger;
     font-weight: 600;
-    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;  
 }
 
 .proyecto-tecnologias{
@@ -95,15 +94,17 @@ main {
   list-style: none;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   overflow: auto;
   gap: 10px;
+  width: 100%;
 }
 
 .proyecto-imagenes img {
   width: 150px;
   aspect-ratio: 4 / 3;   
   object-fit: cover;
-  border: solid 2px rgb(224, 223, 223);
+  border: solid 2px var(--fondo-box);
   border-radius: 15px;
 }
 
@@ -140,7 +141,7 @@ main {
     margin-block: 25px;
     padding-inline: 20px;
     padding-block: 15px;
-    background-color: var(--fondo-box);
+    background: linear-gradient(145deg, var(--fondo-box), var(--fondo-box2));
     border: solid 3px var(--borde-box);
     border-radius: 10px;
     width: 100% ;
@@ -153,7 +154,7 @@ main {
     width: 25vw;
     max-width: 250px;
     height: fit-content;
-    border: solid 2px rgb(224, 223, 223);
+    border: solid 2px var(--texto-general);
     border-radius: 15px;    
 }
 
