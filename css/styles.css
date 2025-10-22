@@ -1,7 +1,7 @@
 :root {
-    --fondo: rgb(73, 73, 119);
-    --fondo-box: rgb(43, 43, 43);
-    --borde-box: rgb(111, 111, 177);
+    --fondo: #3d2b6c;
+    --fondo-box: #232b36;
+    --borde-box: #7856a8;
     --texto-general: rgb(214, 214, 214);
 }
 
@@ -48,7 +48,63 @@ main {
 }
 
 .section-proyectos {
-    height: 9.5rem;    
+}
+
+.proyectos {
+    margin-block: 25px;
+    padding-inline: 20px;
+    padding-block: 15px;
+    background-color: var(--fondo-box);
+    border: solid 3px var(--borde-box);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    gap: 10px;
+}
+
+.proyecto {
+    padding-block: 10px ;
+    padding-inline: 10px;
+    background-color: var(--borde-box);
+    border: solid 3px var(--texto-general);
+    border-radius: 10px;
+    color: black;
+    font-size: larger;
+    font-weight: 600;
+    
+}
+
+.proyecto-tecnologias{
+    padding-block-start: 8px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 7px
+}
+.proyecto-tecnologias li{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--fondo-box);
+    color: var(--texto-general);
+}
+
+.proyecto-imagenes {
+  padding-block-start: 15px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  gap: 10px;
+}
+
+.proyecto-imagenes img {
+  width: 150px;
+  aspect-ratio: 4 / 3;   
+  object-fit: cover;
+  border: solid 2px rgb(224, 223, 223);
+  border-radius: 15px;
 }
 
 

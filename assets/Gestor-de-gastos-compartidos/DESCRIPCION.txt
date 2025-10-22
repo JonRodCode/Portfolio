@@ -1,0 +1,66 @@
+Diseño Gestor.
+
+¿Que es Gestor de Gastos Compartidos?
+
+Gestor de Gastos Compartidos es una app cuyo objetivo es distribuir los gastos del hogar entre los miembros contribuyentes de una manera igualitaria y/o equitativa.
+
+¿A que se refiere con igualitaria y/o equitativa?
+
+Usualmente la division de gastos se suele hacer de manera igualitaria, es decir se
+divide el total de los gastos por el numero de personas involucradas. El Gestor deGastos Compartidos, ademas de este metodo, toma en cuenta otra opcion para repartir
+los gastos: el ingreso de cada persona.
+
+¿Por que?
+
+En la vida hay muchas idas y vueltas respecto a lo que una persona puede aportar alhogar desde el punto de vista economico. Por ej: una persona que tiene un negocio de
+ventas, su ingreso (o ganancia total) va a depender de las ventas que haga. Otro ej:una persona que comenzo un trabajo nuevo, quizas al principio el sueldo es uno y pasado un tiempo es otro (esperemos que uno mejor). Debido a esto y a todas lasposibilidades que pueden haber, no todos los meses se contara con la misma cantidad
+de dinero para aportar al hogar, y aun asi hay cosas esenciales que no pueden quedarsin resolver: gastos de supermercado, gastos medicos, impuestos etc.
+
+Entonces...
+
+¡Cierto!
+El Gestor de Gastos Compartidos propone que estos gastos esenciales se afronten demanera equitativa, según lo que cada uno pueda aportar en el mes. De esta manera,
+los miembros del hogar pueden gestionar los gastos con un enfoque más solidario ycomprensivo, adaptándose a las distintas rachas de ingresos que puedan atravesar.
+
+¿Todos los gastos del hogar seran divididos asi?
+
+No. El Gestor de Gastos Compartidos permite unir las 2 formas de distribucion en una misma gestion, distribuyendo igualitaria y equitativamente a la vez. Nosotros proponemos que se encaren solo los gastos que seconsideren esenciales de manera equitativa. En el hogar hay otro tipos de gastos
+que no son esenciales, como por ej. la compra de un nuevo televisor, estos gastos puedenresolverse de manera igualitaria.
+
+¿Que gastos son esenciales y cuales no?
+
+Eso dependera de lo que considere cada hogar, es por esto que en el Gestor de Gastos
+Compartidos es el usuario, quien define las especificaciones para clasificar los gastosque son esenciales y los que no son esenciales.
+
+¿Podria definir que todos los gastos son esenciales o que ninguno lo sea?
+
+Claro, de esa manera el Gestor distribuiria los gastos de forma equitativa o de forma igualitaria. Nosotros proponemos que se encuentre un equilibrio entre una forma y la otra, eligiendo los gastos esenciales para la distribucion equitativa tratando de ser lo mas justos posibles. De todas maneras eso dependera del usuario.
+
+¿Como empiezo a usar el Gestor de Gastos Compartidos?
+
+Puedes realizar una gestion del mes o una distribucion rapida haciendo click en su respectivo boton "Nueva Gestion" o "Distribucion Rapida"
+
+¿Cual es la diferencia entre una Gestion y una Distribucion Rapida?
+
+La Gestion incluye las 2 partes del proceso, la clasificacion y la distribucion de los gastos. La Distribucion Rapida incluye solo la distribucion.
+
+En la nueva Gestion podras: 
+- Cargar los datos de los miembros del hogar.
+- Cargar los gastos de cada miembro.
+- Definir las especificaciones de clasificacion.
+- Realizar la clasificacion
+- Realizar la distribucion
+
+En la Distribucion Rapida podras:
+- Agregar miembros al hogar
+- Cargar las ganancias
+- Cargar el importe de los gastos en su clasificacion correspondiente.
+- Determinar cantidad de beneficiarios
+- Realizar la distribucion
+
+¿Hace falta logearse y acceder?
+No, podes hacer una gestion de todas maneras.
+
+¿Por que lo haria entonces?
+
+Si te logueas y accedes, vas a poder guardar tus datos (cantidad de miembros, especificaciones de clasificacion, etc) De esta manera podrias reutilizarlos para un futuro resumen
