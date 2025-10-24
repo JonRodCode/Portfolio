@@ -27,19 +27,22 @@ main {
     flex-direction: column;
 
 }
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
+    
+}
+@media (max-width: 768px) {
     
 }
 
-@media (max-width: 480px) {
-    main {
-    padding-left: 8%;
-    padding-right: 8%;
-    }    
-}
+
+
+ /*///////////////// BARRA //////////////////*/
+ /*----------Barra de Navegación superior --------------*/
+
+ /*Esta seccion tiene modificaciones en media especificamente la clase .der*/
 
 .barra-superior {
-    height: 55px;
+    height: auto;
     background-color: black;
     color: var(--texto-general);
     display: flex;
@@ -48,7 +51,7 @@ main {
 }
 
 .barra-lista {
-    padding-inline: 15px;
+    padding-inline: 20px;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -66,6 +69,25 @@ main {
     height: 40px;
 }
 
+@media (max-width: 480px) {
+    main {
+    padding-left: 8%;
+    padding-right: 8%;
+    }
+    .der {
+        display: none;        
+    }
+    .barra-superior {
+        flex-direction: column;
+    }      
+}
+@media (max-width: 375px) {
+    
+}
+
+ /*///////////////// INTRODUCCION//////////////////*/
+ /*----------  Presentacion inicial  --------------*/
+
 .section-intro {  
     margin-top: 50px;  
     display: flex;
@@ -75,6 +97,9 @@ main {
     text-align: center;
     height: 200px;    
 }
+
+ /*///////////////// Proyectos//////////////////*/
+ /*---------- Seccion de proyectos  --------------*/
 
 .section-proyectos {
 }
@@ -142,6 +167,8 @@ main {
   border-radius: 15px;
 }
 
+ /*///////////////// TECNOLOGIAS //////////////////*/
+ /*---------- Seccion de tecnologias  --------------*/
 
 .tecnologias {
     margin-block: 25px;
@@ -170,6 +197,9 @@ main {
     object-fit: contain;
 }
 
+ /*///////////////// Acerca de mi //////////////////*/
+ /*---------- Texto e imagen sobre mi  --------------*/
+
 
 .acerca-de-mi {
     margin-block: 25px;
@@ -197,6 +227,44 @@ main {
     padding-block: 10px ;
 }
 
-.section-contacto {
-    height: 450px;    
+ /*///////////////// CONTACTO //////////////////*/
+ /*---------- Formulario para comunicarse conmigo  --------------*/
+
+.section-contacto {  
+}
+
+.contacto-formulario {
+    margin-block: 25px;
+    padding-inline: 20px;
+    padding-block: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+    gap: 15px;
+}
+
+.contacto-formulario input {
+    padding: 10px;
+    width: 75%;
+    height: 35px;
+    border-radius: 10px;
+    font-size: medium;
+    
+}
+
+.contacto-formulario textarea {
+    padding: 10px;
+    width: 75%;
+    border-radius: 10px;
+    font-size: medium;
+}
+
+.contacto-formulario button {
+    padding: 10px;
+    background: var(--fondo-box);
+    border: solid 3px var(--borde-box);
+    border-radius: 10px;
+    color: var(--texto-general);
+    font-size: medium;
 }
