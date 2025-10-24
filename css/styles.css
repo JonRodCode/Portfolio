@@ -27,14 +27,6 @@ main {
     flex-direction: column;
 
 }
-@media (max-width: 1080px) {
-    
-}
-@media (max-width: 768px) {
-    
-}
-
-
 
  /*///////////////// BARRA //////////////////*/
  /*----------Barra de Navegación superior --------------*/
@@ -51,13 +43,17 @@ main {
 }
 
 .barra-lista {
-    padding-inline: 20px;
+    padding-inline: 10%;
     list-style: none;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+}
+
+.barra-lista p {
+    font-size: x-large;
 }
 
 .barra-lista a {
@@ -67,22 +63,6 @@ main {
 .barra-superior img {
     margin: 5px;
     height: 40px;
-}
-
-@media (max-width: 480px) {
-    main {
-    padding-left: 8%;
-    padding-right: 8%;
-    }
-    .der {
-        display: none;        
-    }
-    .barra-superior {
-        flex-direction: column;
-    }      
-}
-@media (max-width: 375px) {
-    
 }
 
  /*///////////////// INTRODUCCION//////////////////*/
@@ -267,4 +247,43 @@ main {
     border-radius: 10px;
     color: var(--texto-general);
     font-size: medium;
+}
+
+
+@media (max-width: 1080px) {
+    
+}
+@media (max-width: 768px) {
+
+    .barra-lista {
+    padding-inline: 8%;
+}
+}
+
+@media (max-width: 480px) {
+    main {
+    padding-left: 8%;
+    padding-right: 8%;
+    }
+    .der {
+        display: none;        
+    }
+    .barra-superior {
+        flex-direction: column;
+    }
+    .barra-lista {
+    padding-inline: 6%;
+}
+    .contacto-formulario input {
+    width: 100%;
+    
+}
+
+.contacto-formulario textarea {
+    width: 100%;
+} 
+
+}
+@media (max-width: 375px) {
+    
 }
