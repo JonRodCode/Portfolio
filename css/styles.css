@@ -21,6 +21,7 @@ main {
         var(--fondo) 80% 90%,
         black);
     color: var(--texto-general) ;
+    min-width: 375px;
     padding-left: 15%;
     padding-right: 15%;
     display: flex;
@@ -149,24 +150,30 @@ main {
 
  /*///////////////// TECNOLOGIAS //////////////////*/
  /*---------- Seccion de tecnologias  --------------*/
+.tabla-2 {
+    display: none;
+}
 
 .tecnologias {
     margin-block: 25px;
-    padding-block: 15px;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    justify-content: space-between;
-    overflow: auto;
     border: solid 3px var(--borde-box);
     border-radius: 10px;
+    width: 100%;
 }
 
-.tecnologias li {
+.tecnologias tr {
+    margin-block: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;    
+    flex-wrap: wrap;
+    row-gap: 15px;
+}
+
+.tecnologias  td {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-inline: 15px;
     text-align: center;
 }
 
@@ -251,19 +258,42 @@ main {
 
 
 @media (max-width: 1080px) {
+    main {
+    padding-left: 9%;
+    padding-right: 9%;
+    }
     
 }
 @media (max-width: 768px) {
+    main {
+    padding-left: 8%;
+    padding-right: 8%;
+    }
 
     .barra-lista {
-    padding-inline: 8%;
+    padding-inline: 7%;
 }
+    .tabla-1 {
+        display: none;
+    }
+    .tabla-2 {
+        display: grid;
+    }
+
+        .contacto-formulario input {
+    width: 90%;
+    
+}
+
+.contacto-formulario textarea {
+    width: 90%;
+} 
 }
 
 @media (max-width: 480px) {
     main {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 7%;
+    padding-right: 7%;
     }
     .der {
         display: none;        
@@ -285,5 +315,9 @@ main {
 
 }
 @media (max-width: 375px) {
+    main {
+    padding-left: 6%;
+    padding-right: 6%;
+    }
     
 }
