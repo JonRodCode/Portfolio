@@ -162,12 +162,17 @@ main {
 }
 
 .tecnologias tr {
-    margin-block: 15px;
+    padding-block: 15px;
     display: flex;
     justify-content: space-around;
-    width: 100%;    
-    flex-wrap: wrap;
-    row-gap: 15px;
+    width: 100%;
+}
+tr:nth-child(even) {
+    background: linear-gradient(180deg, var(--fondo-box), var(--fondo-box2));
+}
+
+tr:nth-child(odd) {
+    background: linear-gradient(0deg, var(--fondo-box), var(--fondo-box2));
 }
 
 .tecnologias  td {
