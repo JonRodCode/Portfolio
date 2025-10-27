@@ -168,22 +168,22 @@ main {
     width: 100%;
 }
 tr:nth-child(even) {
-    background: linear-gradient(180deg, var(--fondo-box), var(--fondo-box2));
-}
-
-tr:nth-child(odd) {
     background: linear-gradient(0deg, var(--fondo-box), var(--fondo-box2));
 }
 
-.tecnologias  td {
+tr:nth-child(odd) {
+    background: linear-gradient(225deg, var(--fondo-box), var(--fondo-box2));
+}
+
+.tecnologias td {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 10px;
 }
 
 .section-tecnologias img {
-    padding-block-end: 15px;
     width: 60px;
     height: 60px;
     object-fit: contain;
@@ -308,6 +308,12 @@ tr:nth-child(odd) {
     }
     .barra-lista {
     padding-inline: 6%;
+}
+    .tecnologias td {
+        width: 60px;
+    }
+    .contacto-formulario {
+    padding-inline: 5px;
 }
     .contacto-formulario input {
     width: 100%;
