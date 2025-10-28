@@ -5,6 +5,7 @@
     --fondo-box2: #484f92;
     --borde-box: #79a1d6;
     --texto-general: rgb(214, 214, 214);
+    --hipervinculo: #ffffff;
 }
 
 * {
@@ -26,7 +27,7 @@ main {
     padding-right: 15%;
     display: flex;
     flex-direction: column;
-
+    font-family: 'Bricolage Grotesque', sans-serif;
 }
 
  /*///////////////// BARRA //////////////////*/
@@ -35,6 +36,7 @@ main {
  /*Esta seccion tiene modificaciones en media especificamente la clase .der*/
 
 .barra-superior {
+    padding-block: 5px;
     height: auto;
     background-color: black;
     color: var(--texto-general);
@@ -51,6 +53,7 @@ main {
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+    height: 50px;
 }
 
 .barra-lista p {
@@ -58,12 +61,21 @@ main {
 }
 
 .barra-lista a {
-    color: var(--texto-general)
+    color: var(--texto-general);
 }
 
-.barra-superior img {
+.barra-lista a:hover {
+    color: var(--hipervinculo)
+}
+
+.barra-lista img {
     margin: 5px;
-    height: 40px;
+    height: 35px;
+    opacity: 0.9;
+}
+.barra-lista img:hover {
+    height: 42px;
+    opacity: 1;
 }
 
  /*///////////////// INTRODUCCION//////////////////*/
