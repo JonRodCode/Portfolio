@@ -1,11 +1,15 @@
 :root {
-    --fondo: #0b0838;
-    --fondo2: #171977;
-    --fondo-box: #232b36;
-    --fondo-box2: #484f92;
+    --fondo: #081138;
+    --fondo2: #07137c;
+    --fondo-box: #232936;
+    --fondo-box2: #486692;
     --borde-box: #79a1d6;
     --texto-general: rgb(214, 214, 214);
     --hipervinculo: #ffffff;
+
+    --font-nombre: "Roboto", sans-serif;
+    --font-titulos: "Bricolage Grotesque", sans-serif;
+    --font-texto: "Inter", sans-serif;
 }
 
 * {
@@ -22,13 +26,42 @@ main {
         var(--fondo) 80% 90%,
         black);
     color: var(--texto-general) ;
-    min-width: 375px;
-    padding-left: 15%;
-    padding-right: 15%;
     display: flex;
     flex-direction: column;
-    font-family: 'Bricolage Grotesque', sans-serif;
 }
+h1 {
+    font-family: var(--font-titulos);
+    
+}
+h1, h2 {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: x-large;    
+}
+
+h2, p {
+    font-family: var(--font-texto);
+}
+p {
+    font-weight: 400;
+    font-size: large;
+}
+
+.section-intro {
+    background: linear-gradient(
+        var(--fondo),
+        black);
+    color: var(--texto-general) ;
+}
+
+.section-proyectos, .section-tecnologias,
+.section-acerca, .section-contacto {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
 
  /*///////////////// BARRA //////////////////*/
  /*----------Barra de Navegación superior --------------*/
@@ -43,6 +76,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: solid 1px var(--borde-box);
 }
 
 .barra-lista {
@@ -81,14 +115,20 @@ main {
  /*///////////////// INTRODUCCION//////////////////*/
  /*----------  Presentacion inicial  --------------*/
 
-.section-intro {  
-    margin-top: 50px;  
+.section-intro {
+    padding-block-start: 30px;  
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-block-end: 100px;
     text-align: center;
-    height: 200px;    
+    height: 200px;
+    width: 100%; 
+}
+
+.section-intro h1 {
+    color: #00c6ff;
+    font-size: 2.9rem;
 }
 
  /*///////////////// Proyectos//////////////////*/
@@ -112,7 +152,6 @@ main {
     background: linear-gradient(145deg, var(--fondo-box2), var(--fondo-box));
     border: solid 3px var(--borde-box);
     border-radius: 10px;
-    font-size: larger;
     font-weight: 600;
     display: flex;
     flex-direction: column;
@@ -227,7 +266,6 @@ tr:nth-child(odd) {
 }
 
 .acerca-de-mi p {
-    font-size: larger;
     padding-block: 10px ;
 }
 
@@ -248,20 +286,21 @@ tr:nth-child(odd) {
     gap: 15px;
 }
 
+.contacto-formulario {
+    font-size: medium;
+}
+
 .contacto-formulario input {
     padding: 10px;
     width: 75%;
     height: 35px;
-    border-radius: 10px;
-    font-size: medium;
-    
+    border-radius: 10px;    
 }
 
 .contacto-formulario textarea {
     padding: 10px;
     width: 75%;
     border-radius: 10px;
-    font-size: medium;
 }
 
 .contacto-formulario button {
@@ -270,21 +309,22 @@ tr:nth-child(odd) {
     border: solid 3px var(--borde-box);
     border-radius: 10px;
     color: var(--texto-general);
-    font-size: medium;
 }
 
 
 @media (max-width: 1080px) {
-    main {
-    padding-left: 9%;
-    padding-right: 9%;
+    .section-proyectos, .section-tecnologias,
+    .section-acerca, .section-contacto {
+        padding-left: 9%;
+        padding-right: 9%;
     }
     
 }
 @media (max-width: 768px) {
-    main {
-    padding-left: 8%;
-    padding-right: 8%;
+    .section-proyectos, .section-tecnologias,
+    .section-acerca, .section-contacto {
+        padding-left: 8%;
+        padding-right: 8%;
     }
 
     .barra-lista {
@@ -308,9 +348,10 @@ tr:nth-child(odd) {
 }
 
 @media (max-width: 480px) {
-    main {
-    padding-left: 7%;
-    padding-right: 7%;
+    .section-proyectos, .section-tecnologias,
+    .section-acerca, .section-contacto {
+        padding-left: 7%;
+        padding-right: 7%;
     }
     .der {
         display: none;        
@@ -338,9 +379,10 @@ tr:nth-child(odd) {
 
 }
 @media (max-width: 375px) {
-    main {
-    padding-left: 6%;
-    padding-right: 6%;
+    .section-proyectos, .section-tecnologias,
+    .section-acerca, .section-contacto {
+        padding-left: 6%;
+        padding-right: 6%;
     }
     
 }
