@@ -8,6 +8,7 @@
     --hipervinculo: #ffffff;
 
     --font-nombre: "Roboto", sans-serif;
+    --font-iniciales: "Roboto Slab", serif;
     --font-titulos: "Bricolage Grotesque", sans-serif;
     --font-texto: "Inter", sans-serif;
 }
@@ -28,17 +29,24 @@ main {
     color: var(--texto-general) ;
     display: flex;
     flex-direction: column;
+    min-width: 375px;
 }
+
 h1 {
     font-family: var(--font-titulos);
+    font-size: 2rem;
     
 }
 h1, h2 {
     font-weight: 700;
 }
 
+i {
+    font-size: 1.4rem;
+}
+
 h2 {
-    font-size: x-large;    
+    font-size: 1.6rem;    
 }
 
 h2, p {
@@ -46,7 +54,14 @@ h2, p {
 }
 p {
     font-weight: 400;
-    font-size: large;
+    font-size: 1.1rem;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
 
 .section-intro {
@@ -54,6 +69,7 @@ p {
         var(--fondo),
         black);
     color: var(--texto-general) ;
+    min-width: 375px;
 }
 
 .section-proyectos, .section-tecnologias,
@@ -73,10 +89,11 @@ p {
     height: auto;
     background-color: black;
     color: var(--texto-general);
+    font-family: var(--font-iniciales);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: solid 1px var(--borde-box);
+    border-bottom: solid 2px var(--borde-box);
 }
 
 .barra-lista {
@@ -96,10 +113,13 @@ p {
 
 .barra-lista a {
     color: var(--texto-general);
+    font-family: var(--texto-general);
+    text-decoration: none;
 }
 
 .barra-lista a:hover {
-    color: var(--hipervinculo)
+    color: var(--hipervinculo);
+    text-decoration: underline;
 }
 
 .barra-lista img {
@@ -116,19 +136,24 @@ p {
  /*----------  Presentacion inicial  --------------*/
 
 .section-intro {
-    padding-block-start: 30px;  
+    padding-block-start: 40px;  
+    padding-block-end: 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-block-end: 100px;
     text-align: center;
-    height: 200px;
-    width: 100%; 
+    width: 100%;
+    gap: 15px;
 }
 
 .section-intro h1 {
     color: #00c6ff;
+    font-family: var(--font-nombre);
     font-size: 2.9rem;
+}
+
+.section-intro h2 {
+    font-size: 2rem;
 }
 
  /*///////////////// Proyectos//////////////////*/

@@ -6,8 +6,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 <!-- Aca traemos fonts de google-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +19,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
     <nav class="barra-superior">
@@ -51,7 +56,10 @@
     
     <main>
         <section class="section-proyectos" id="proyectos" >
-            <h1>Proyectos:</h1>
+            <div class="titulos">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h1>Proyectos</h1>
+            </div>
             <div class="proyectos">
                 <div class="proyecto">
                     <h2>Gestor de gastos compartidos</h2>
@@ -124,7 +132,10 @@
         </section>
 
         <section class="section-tecnologias">
-            <h1>Tecnologias</h1>
+            <div class="titulos">
+                <i class="fa-solid fa-layer-group"></i> 
+                <h1>Tecnologias</h1>
+            </div>
             <table class="tecnologias tabla-1">
                 <tr>
                     <td><img src="./assets/tecnologias/java.png" alt="java"><span>Java</span></td>
@@ -171,7 +182,10 @@
         </section>
 
         <section class="section-acerca" id="acerca-de-mi">
-            <h1>Acerca de mi</h1>
+            <div class="titulos">
+                <i class="fa-solid fa-id-card"></i>
+                <h1>Acerca de mi</h1>
+            </div>
             <div class="acerca-de-mi">
                 <img src="./assets/imagen-perfil.jpg" >
                 <p>A mediados de 2023 decidí embarcarme en el mundo de la programación. Comencé con cursos en la plataforma Coursera y otros en YouTube. Más adelante inicié mis estudios académicos en la Tecnicatura en Desarrollo de Software del IFTS Nº29.</p>
@@ -181,7 +195,10 @@
         </section>
 
         <section class="section-contacto" id="contacto">
-            <h1>Contacto</h1>
+            <div class="titulos">
+                <i class="fa-solid fa-envelope"></i> 
+                <h1>Contacto</h1>
+            </div>
             <div>
                 <form action="" class="contacto-formulario">
                     <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre" required>
