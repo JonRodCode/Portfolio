@@ -66,6 +66,24 @@ p {
     font-size: 1.1rem;
 }
 
+.barra-superior {
+    font-family: var(--font-iniciales);
+    font-size: 1rem;
+}
+
+.barra-lista p {
+    font-size: 1.4rem;
+}
+
+.section-intro h1 {
+    font-family: var(--font-nombre);
+    font-size: 2.9rem;
+}
+
+.section-intro h2 {
+    font-size: 2rem;
+}
+
 /* Algunas definiciones de posicionamiento*/
 
 .titulos {
@@ -97,7 +115,6 @@ p {
     height: auto;
     background-color: black;
     color: var(--texto-general);
-    font-family: var(--font-iniciales);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -115,13 +132,8 @@ p {
     height: 50px;
 }
 
-.barra-lista p {
-    font-size: x-large;
-}
-
 .barra-lista a {
     color: var(--texto-general);
-    font-family: var(--texto-general);
     text-decoration: none;
 }
 
@@ -163,12 +175,6 @@ p {
 
 .section-intro h1 {
     color: #00c6ff;
-    font-family: var(--font-nombre);
-    font-size: 2.9rem;
-}
-
-.section-intro h2 {
-    font-size: 2rem;
 }
 
  /*///////////////// Proyectos//////////////////*/
@@ -392,6 +398,7 @@ tr:nth-child(odd) {
         padding-left: 5%;
         padding-right: 5%;
     }
+    
     .der {
         display: none;        
     }
@@ -399,11 +406,28 @@ tr:nth-child(odd) {
         flex-direction: column;
     }
     .barra-lista {
-    padding-inline: 6%;
+    padding-inline: 3%;
+    height: 38px;
+}
+.barra-lista img {
+    margin: 3px;
+    height: 30px;
+}
+.barra-lista img:hover {
+    height: 30px;
+}
+
+.section-intro {
+    padding-block-start: 15px;  
+    padding-block-end: 30px;
 }
     .tecnologias td {
         width: 60px;
     }
+    .section-tecnologias img {
+    width: 45px;
+    height: 45px;
+}
     .contacto-formulario {
     padding-inline: 5px;
 }
@@ -414,7 +438,42 @@ tr:nth-child(odd) {
 
 .contacto-formulario textarea {
     width: 100%;
-} 
+}
+
+/*Definiciones de textos*/
+
+h1 {
+    font-family: var(--font-titulos);
+    font-size: 1.5rem;
+    
+}
+h1, h2 {
+    font-weight: 700;
+}
+
+i {
+    font-size: 1.1rem;
+}
+
+h2 {
+    font-size: 1.2rem;    
+}
+p {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.barra-lista p {
+    font-size: 1.2rem;
+}
+
+.section-intro h1 {
+    font-size: 2.3rem;
+}
+
+.section-intro h2 {
+    font-size: 1.6rem;
+}
 
 }
 @media (max-width: 375px) {
@@ -422,6 +481,5 @@ tr:nth-child(odd) {
     .section-acerca, .section-contacto {
         padding-left: 4%;
         padding-right: 4%;
-    }   
-    
+    }
 }
