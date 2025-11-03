@@ -71,8 +71,8 @@ p {
     font-size: 1rem;
 }
 
-.barra-lista p {
-    font-size: 1.4rem;
+.barra-lista:first-child{
+    font-size: 1.5rem;
 }
 
 .section-intro h1 {
@@ -111,8 +111,10 @@ p {
  /*Esta seccion tiene modificaciones en media especificamente la clase .der*/
 
 .barra-superior {
+    position: fixed;
     padding-block: 5px;
     height: auto;
+    width: 100%;
     background-color: black;
     color: var(--texto-general);
     display: flex;
@@ -139,7 +141,6 @@ p {
 
 .barra-lista a:hover {
     color: var(--hipervinculo);
-    text-decoration: underline;
 }
 
 .barra-lista img {
@@ -163,8 +164,8 @@ p {
 }
 
 .section-intro {
-    padding-block-start: 40px;  
-    padding-block-end: 80px;
+    padding-block-start: 120px;  
+    padding-block-end: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -202,8 +203,7 @@ p {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    gap: 10px;
-    overflow: hidden;  
+    gap: 10px;  
 }
 
 .p2 {
@@ -224,41 +224,69 @@ p {
     color: var(--texto-general);
 }
 
-.proyecto-imagenes{
-    background: var(--fondo-box);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: solid 5px var(--borde-box);
-    border-radius: 10px;
-    max-height: 600px;
-}
-
-.proyecto-imagenes img {
-    border: solid 2px var(--fondo-box);
-    width: 60vw;
-    height: auto;
-    object-fit: contain;
-}
-
-.lista-imagenes {
-  border-left: solid 5px var(--borde-box);
+.proyecto-imagenes {
+  border: solid 5px var(--borde-box);
   border-radius: 10px;
   list-style: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   overflow: auto;
   gap: 10px;
-  width: 100px;
+  width: 100%;
+  max-width: 1100px;
 }
 
-.lista-imagenes img {
-  width: 100%;
+.proyecto-imagenes img {
+  width: 150px;
   aspect-ratio: 4 / 3;   
   object-fit: cover;
   border: solid 2px var(--fondo-box);
   border-radius: 15px;
+}
+
+.visualizador {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--fondo-box);
+  min-width: 375px;
+}
+
+.visualizador img {
+  max-width: 80vw;
+  max-height: 85vh;
+  border-radius: 10px;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: var(--texto-general);
+  cursor: pointer;
+}
+
+.flecha-izq {
+  left: 10px;
+}
+
+.flecha-der {
+  right: 10px;
 }
 
  /*///////////////// TECNOLOGIAS //////////////////*/
@@ -380,19 +408,6 @@ tr:nth-child(odd) {
         padding-left: 8%;
         padding-right: 8%;
     }
-    .proyecto-imagenes{
-}
-
-.proyecto-imagenes img {
-    width: 75vw;
-    min-width: 300px;
-}
-
-.lista-imagenes {
-    display: none;
-}
-
-
     
 }
 @media (max-width: 768px) {
@@ -448,8 +463,8 @@ tr:nth-child(odd) {
 }
 
 .section-intro {
-    padding-block-start: 20px;  
-    padding-block-end: 35px;
+    padding-block-start: 90px;  
+    padding-block-end: 70px;
 }
     .tecnologias td {
         width: 60px;
@@ -511,5 +526,8 @@ p {
     .section-acerca, .section-contacto {
         padding-left: 4%;
         padding-right: 4%;
+    }
+    .visualizador img {
+        min-width: 80%;
     }
 }
