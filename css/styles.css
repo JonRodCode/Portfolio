@@ -13,6 +13,8 @@
     --font-texto: "Inter", sans-serif;
 }
 
+/*Definicion de fondo y configuracion general*/
+
 * {
     margin:0;
     padding: 0;
@@ -31,6 +33,8 @@ main {
     flex-direction: column;
     min-width: 375px;
 }
+
+/*Definiciones de textos*/
 
 h1 {
     font-family: var(--font-titulos);
@@ -57,6 +61,8 @@ p {
     font-size: 1.1rem;
 }
 
+/* Algunas definiciones de posicionamiento*/
+
 .titulos {
     display: flex;
     flex-direction: row;
@@ -64,18 +70,10 @@ p {
     gap: 10px;
 }
 
-.section-intro {
-    background: linear-gradient(
-        var(--fondo),
-        black);
-    color: var(--texto-general) ;
-    min-width: 375px;
-}
-
 .section-proyectos, .section-tecnologias,
 .section-acerca, .section-contacto {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 12%;
+    padding-right: 12%;
 }
 
 
@@ -134,6 +132,14 @@ p {
 
  /*///////////////// INTRODUCCION//////////////////*/
  /*----------  Presentacion inicial  --------------*/
+
+.section-intro {
+    background: linear-gradient(
+        var(--fondo),
+        black);
+    color: var(--texto-general) ;
+    min-width: 375px;
+}
 
 .section-intro {
     padding-block-start: 40px;  
@@ -340,16 +346,16 @@ tr:nth-child(odd) {
 @media (max-width: 1080px) {
     .section-proyectos, .section-tecnologias,
     .section-acerca, .section-contacto {
-        padding-left: 9%;
-        padding-right: 9%;
+        padding-left: 8%;
+        padding-right: 8%;
     }
     
 }
 @media (max-width: 768px) {
     .section-proyectos, .section-tecnologias,
     .section-acerca, .section-contacto {
-        padding-left: 8%;
-        padding-right: 8%;
+        padding-left: 6%;
+        padding-right: 6%;
     }
 
     .barra-lista {
@@ -375,8 +381,8 @@ tr:nth-child(odd) {
 @media (max-width: 480px) {
     .section-proyectos, .section-tecnologias,
     .section-acerca, .section-contacto {
-        padding-left: 7%;
-        padding-right: 7%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     .der {
         display: none;        
@@ -406,8 +412,8 @@ tr:nth-child(odd) {
 @media (max-width: 375px) {
     .section-proyectos, .section-tecnologias,
     .section-acerca, .section-contacto {
-        padding-left: 6%;
-        padding-right: 6%;
+        padding-left: 3%;
+        padding-right: 3%;
     }
     
 }
