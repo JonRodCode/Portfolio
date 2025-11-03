@@ -153,6 +153,10 @@ p {
     opacity: 1;
 }
 
+.der-pequeña {
+    display: none;
+}
+
  /*///////////////// INTRODUCCION//////////////////*/
  /*----------  Presentacion inicial  --------------*/
 
@@ -447,9 +451,11 @@ tr:nth-child(odd) {
     .der {
         display: none;        
     }
-    .barra-superior {
-        flex-direction: column;
+    .der-pequeña{
+        display: flex;
+        gap:15px
     }
+    
     .barra-lista {
     padding-inline: 3%;
     height: 38px;
