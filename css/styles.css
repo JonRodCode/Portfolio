@@ -121,6 +121,7 @@ p {
     flex-direction: row;
     justify-content: space-between;
     border-bottom: solid 2px var(--borde-box);
+    z-index: 1;
 }
 
 .barra-lista {
@@ -260,6 +261,7 @@ p {
   height: 100%;
   background: var(--fondo-box);
   min-width: 375px;
+  z-index: 2;
 }
 
 .visualizador img {
@@ -455,7 +457,7 @@ tr:nth-child(odd) {
         display: flex;
         gap:15px
     }
-    
+
     .barra-lista {
     padding-inline: 3%;
     height: 38px;
