@@ -1,4 +1,4 @@
-#Portfolio Web - Jonatan A. Rodriguez
+# Portfolio Web - Jonatan A. Rodriguez
 
 Este es mi portfolio personal como desarrollador de software.  
 Aquí presento mis proyectos, las tecnologias que manejo y un poco acerca de mi.
