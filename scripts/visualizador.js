@@ -1,52 +1,71 @@
-const imagenesProyecto1 = document.querySelectorAll('.proyecto1 img');
-const imagenesProyecto2 = document.querySelectorAll('.proyecto2 img');
-const imagenes = [
-  { nombre: "proyecto1", imagenes: imagenesProyecto1 },
-  { nombre: "proyecto2", imagenes: imagenesProyecto2 }
+const grupos = [
+  { nombre: "proyecto1", imagenes: document.querySelectorAll('.proyecto1 img') },
+  { nombre: "proyecto2", imagenes: document.querySelectorAll('.proyecto2 img') }
 ];
+
 const visualizador = document.getElementById('visualizador');
 const imagenGrande = visualizador.querySelector('.imagen-grande');
+const contador = visualizador.querySelector('.contador');
 const botonCerrar = visualizador.querySelector('.cerrar');
 const flechaIzq = visualizador.querySelector('.flecha-izq');
 const flechaDer = visualizador.querySelector('.flecha-der');
 
+let grupoActual = null;
 let indiceActual = 0;
-let proyecto = "";
 
-// Abrimos el visualizador
-imagenes.forEach((elemento) => {
-  elemento.imagenes.forEach((img, index) => {
-    img.addEventListener('click', () => {
-      imagenGrande.src = img.src;
-      visualizador.style.display = 'flex';
-      indiceActual = index;
-      proyecto = elemento.nombre;
-    });
+grupos.forEach(grupo => {
+  grupo.imagenes.forEach((img, index) => {
+    img.addEventListener('click', () => abrirVisualizador(grupo, index));
   });
 });
 
-
-function mostrarImagen(indice) {
-    const indiceDeVisualizador = proyecto === "proyecto1" ? 0 : 1;
-    const imagenesActuales = imagenes[indiceDeVisualizador].imagenes;
-    if (indice < 0) indice = 0;
-    if (indice >= imagenesActuales.length) indice -= 1;
-    imagenGrande.src = imagenesActuales[indice].src;
-    indiceActual = indice;
+function abrirVisualizador(grupo, index) {
+  grupoActual = grupo;
+  indiceActual = index;
+  mostrarImagenActual();
+  visualizador.classList.add('abierto');
+  visualizador.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
 }
 
-// Flechitas de navegación y boton cerrar
-flechaIzq.addEventListener('click', () => mostrarImagen(indiceActual - 1));
-flechaDer.addEventListener('click', () => mostrarImagen(indiceActual + 1));
-botonCerrar.addEventListener('click', () => {
-    visualizador.style.display = 'none';
+function cerrarVisualizador() {
+  visualizador.classList.remove('abierto');
+  visualizador.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+function mostrarImagenActual() {
+  if (!grupoActual) return;
+  const imagenes = grupoActual.imagenes;
+  const total = imagenes.length;
+  indiceActual = (indiceActual + total) % total; // navegación circular
+  const img = imagenes[indiceActual];
+  imagenGrande.src = img.src;
+  imagenGrande.alt = img.alt;
+  contador.textContent = `${indiceActual + 1} / ${total}`;
+}
+
+function siguiente() {
+  indiceActual += 1;
+  mostrarImagenActual();
+}
+
+function anterior() {
+  indiceActual -= 1;
+  mostrarImagenActual();
+}
+
+flechaIzq.addEventListener('click', anterior);
+flechaDer.addEventListener('click', siguiente);
+botonCerrar.addEventListener('click', cerrarVisualizador);
+
+visualizador.addEventListener('click', (e) => {
+  if (e.target === visualizador) cerrarVisualizador();
 });
 
-// Aca detectamos si las teclas de las flechas y la tecla escape son pulsadas
 document.addEventListener('keydown', (e) => {
-    if (visualizador.style.display === 'flex') {
-    if (e.key === 'ArrowLeft') mostrarImagen(indiceActual - 1);
-    if (e.key === 'ArrowRight') mostrarImagen(indiceActual + 1);
-    if (e.key === 'Escape') visualizador.style.display = 'none';
-    }
+  if (!visualizador.classList.contains('abierto')) return;
+  if (e.key === 'ArrowLeft') anterior();
+  if (e.key === 'ArrowRight') siguiente();
+  if (e.key === 'Escape') cerrarVisualizador();
 });

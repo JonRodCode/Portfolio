@@ -1,241 +1,286 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="scripts/visualizador.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonatan A. Rodríguez — Desarrollador de Software</title>
+  <meta name="description" content="Portfolio de Jonatan A. Rodríguez, desarrollador de software. Proyectos, stack y contacto.">
 
-<!-- Aca traemos fonts de google-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <nav class="barra-superior">
-        <ul class="barra-lista izq">
-            <li><a href="#intro">JAR</a></li>
-            <li><ul class="barra-lista">
-                <li>
-                    <a href="https://github.com/JonRodCode" target="_blank">
-                    <img src="./assets/iconos/github.png" alt="">
-                </a></li>
-                <li>
-                    <a href="https://www.linkedin.com/in/jona-tan-alexis-rodriguez" target="_blank">
-                    <img src="./assets/iconos/linkedin.png" alt="">
-                </a></li>
-            </ul></li>
-        </ul>
-        <ul class="barra-lista der">
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#acerca-de-mi">Acerca de mi</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-        <ul class="barra-lista der-pequeña">
-            <li><a href="#proyectos">
-                <i class="fa-solid fa-laptop-code"></i>
-            </a></li>
-            <li><a href="#acerca-de-mi">
-                <i class="fa-solid fa-id-card"></i>
-            </a></li>
-            <li><a href="#contacto">                
-                <i class="fa-solid fa-envelope"></i> 
-            </a></li>
-        </ul>
 
-    </nav>
-    <section class="section-intro" id="intro">
-        <h1>Jonatan A. Rodriguez</h1>
-        <h2>Desarrollador de Software</h2>
-        <p>Mis metas son generar código de calidad: limpio, eficiente y mantenible.</p>                          
-    </section>
+  <div class="progreso" id="progreso"></div>
+
+  <nav class="nav">
+    <div class="nav-socials">
+      <a href="#inicio" class="nav-logo">J.A.R.</a>
+      <a href="https://github.com/JonRodCode" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/jona-tan-alexis-rodriguez" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#inicio">Home</a></li>
+      <li><a href="#acerca-de-mi">Acerca de mí</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#stack">Habilidades</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
     
-    <main>
-        <section class="section-proyectos" id="proyectos" >
-            <div class="titulos">
-                <i class="fa-solid fa-laptop-code"></i>
-                <h1>Proyectos</h1>
-            </div>
-            <div class="proyectos">
-                <div class="proyecto p1">
-                    <h2>Gestor de gastos compartidos</h2>
-                    <div class="proyecto-descripcion">
-                        <p>Aplicación web orientada a la gestión integral de un hogar, permitiendo registrar, clasificar y analizar los distintos gastos de manera organizada y transparente.</p>
-                        <p>El sistema realiza los cálculos necesarios para distribuir los gastos entre los distintos miembros del hogar, facilitando una administración equitativa y automatizada.</p>
-                        <p>El backend está diseñado bajo una arquitectura de microservicios, donde uno se encarga del servicio de clasificación y el otro de la distribución de los gastos, promoviendo escalabilidad y mantenimiento independiente.</p>
-                        <p>Actualmente en etapa de desarrollo, con una versión alfa funcional disponible. El código fuente y las actualizaciones se encuentran publicados en el repositorio de GitHub.</p>
-                    </div>                   
-                    <ul class="proyecto-tecnologias">
-                        <li><p>Java</p></li>
-                        <li><p>SpringBoot</p></li>
-                        <li><p>React</p></li>
-                    </ul>
-                    <ul class="proyecto-imagenes proyecto1">
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura1.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura2.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura3.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura4.0.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura5.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura6.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura7.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura8.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura9.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura10.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura11.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura12.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura13.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura14.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura15.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura16.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura17.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura18.png" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura19.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura20.png" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura21.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura22.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura23.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura24.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura25.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Gestor-de-gastos-compartidos/Captura26.JPG" alt="imagen-proyecto"></li>
-                    </ul>
-                    
-                </div>
-                <div class="proyecto p2">
-                    <h2>Administrador de vehiculos</h2>
-                    <div class="proyecto-descripcion">
-                        <p>Aplicación web desarrollada para administrar y gestionar de manera eficiente una flota de vehículos, facilitando el control de su uso, mantenimiento y disponibilidad.</p>
-                        <p>Incluye funcionalidades de tipo CRUD para el registro, edición y seguimiento de los servicios, reparaciones y usos de cada vehículo.</p>
-                        <p>La información se almacena de forma segura mediante una base de datos alojada en la nube.</p>
 
-                    </div>
-                    <ul class="proyecto-tecnologias">
-                        <li><p>C#</p></li>
-                        <li><p>.Net</p></li>
-                        <li><p>MongoDB</p></li>
-                    </ul>
-                    <ul class="proyecto-imagenes proyecto2">
-                        <li><img src="./assets/Administrador-de-vehiculos/Captura.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Administrador-de-vehiculos/Captura1.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Administrador-de-vehiculos/Captura2.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Administrador-de-vehiculos/Captura3.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Administrador-de-vehiculos/Captura4.0.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Administrador-de-vehiculos/Captura4.5.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Administrador-de-vehiculos/Captura5.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Administrador-de-vehiculos/Captura6.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Administrador-de-vehiculos/Captura7.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Administrador-de-vehiculos/Captura8.JPG" alt="imagen-proyecto"></li>
-                        <li><img src="./assets/Administrador-de-vehiculos/Captura9.JPG" alt="imagen-proyecto"></li>
-                    </ul>
-                </div>
-                
-                <div class="proyecto">
-                    <h2>Otros</h2>
-                </div>
-            </div>    
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </nav>
 
-            <div class="visualizador" id="visualizador">
-                <span class="cerrar">x</span>
-                <span class="flecha flecha-izq"><</span>
-                <img class="imagen-grande" src="" alt="imagen-grande">
-                <span class="flecha flecha-der">></span>
-            </div>
-        </section>
+  <div class="nav-mobile" id="navMobile">
+    <ul>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#acerca-de-mi">Acerca de mí</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <!--
+    <div class="nav-mobile-socials">
+      <a href="https://github.com/JonRodCode" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/jona-tan-alexis-rodriguez" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  -->
+  </div>
 
-        <section class="section-tecnologias">
-            <div class="titulos">
-                <i class="fa-solid fa-layer-group"></i> 
-                <h1>Tecnologias</h1>
-            </div>
-            <table class="tecnologias tabla-1">
-                <tr>
-                    <td><img src="./assets/tecnologias/java.png" alt="java"><span>Java</span></td>
-                    <td> <img src="./assets/tecnologias/springboot.png" alt="springboot" ><span>Spring Boot</span></td>
-                    <td><img src="./assets/tecnologias/csharp.png" alt="c#" ><span>C#</span></td>
-                    <td><img src="./assets/tecnologias/net.png" alt="c#" ><span>.Net</span></td>
-                    <td><img src="./assets/tecnologias/sql.png" alt="bd" ><span>Bases de datos</span></td>
-                    <td><img src="./assets/tecnologias/mongo2.png" alt="mongo" ><span>MongoDB</span></td>
-                </tr>
-                <tr>
-                    <td><img src="./assets/tecnologias/html.png" alt="html" >
-                                        <span>Html</span></td>
-                    <td><img src="./assets/tecnologias/css.png" alt="css" >
-                                        <span>Css</span></td>
-                    <td><img src="./assets/tecnologias/javascript.png" alt="javascrpit" >
-                                        <span>JavaScript</span></td>                                    
-                    <td><img src="./assets/tecnologias/react.png" alt="react" ><span>React</span></td>
-                    <td><img src="./assets/tecnologias/python.png" alt="python"><span>Python</span></td>                                        
-                </tr>
-            </table>
-            <table class="tecnologias tabla-2">
-                <tr>
-                    <td><img src="./assets/tecnologias/java.png" alt="java"><span>Java</span></td>
-                    <td> <img src="./assets/tecnologias/springboot.png" alt="springboot" ><span>Spring Boot</span></td>
-                    <td><img src="./assets/tecnologias/csharp.png" alt="c#" ><span>C#</span></td>
-                    <td><img src="./assets/tecnologias/net.png" alt="c#" ><span>.Net</span></td>
-                </tr>
-                <tr>
-                    <td><img src="./assets/tecnologias/html.png" alt="html" >
-                                        <span>Html</span></td>
-                    <td><img src="./assets/tecnologias/css.png" alt="css" >
-                                        <span>Css</span></td>
-                    <td><img src="./assets/tecnologias/javascript.png" alt="javascrpit" >
-                                        <span>JavaScript</span></td>
-                                    </tr>
-                                    <td><img src="./assets/tecnologias/react.png" alt="react" >
-                                                        <span>React</span></td>
-                                    <td><img src="./assets/tecnologias/python.png" alt="python" >
-                                                        <span>Python</span></td>
-                                                        <td><img src="./assets/tecnologias/sql.png" alt="bd" ><span>Bases de datos</span></td>
-                    <td><img src="./assets/tecnologias/mongo2.png" alt="mongo" ><span>MongoDB</span></td>
-                </tr>
-            </table>
-        </section>
+  <main>
 
-        <section class="section-acerca" id="acerca-de-mi">
-            <div class="titulos">
-                <i class="fa-solid fa-id-card"></i>
-                <h1>Acerca de mi</h1>
-            </div>
-            <div class="acerca-de-mi">
-                <img src="./assets/imagen-perfil.jpg" >
-                <p>A mediados de 2023 decidí embarcarme en el mundo de la programación. Comencé con cursos en la plataforma Coursera y otros en YouTube. Más adelante inicié mis estudios académicos en la Tecnicatura en Desarrollo de Software del IFTS Nº29.</p>
-                <p>En mis tiempos libres sigo capacitándome de forma autodidacta a través de plataformas como Udemy, Maxiprograma e investigando por mi cuenta en la web. Siempre busco aplicar lo que aprendo en proyectos prácticos que tengan un valor real, por eso la mayoría de mis desarrollos son utilizados en el día a día.</p>
-                <p>Me gusta trabajar en equipo, creo que en la experiencia de trabajar con otros hay un gran valor de crecimiento personal y grupal.</p>
-                <p>Fuera del mundo de la programación, soy músico: toco el bajo en una banda, compongo canciones y disfruto explorando efectos y sonidos. También me gusta salir a andar en bicicleta por la ciudad y, cuando puedo, acercarme a la naturaleza.</p>
-            </div> 
-        </section>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <p class="hero-eyebrow reveal">Diseño · Arquitectura · Código</p>
+      <h1 class="hero-name reveal">Jonatan A. Rodriguez</h1>
+      <h2 class="hero-rol reveal">Desarrollador de Software</h2>
+      <p class="hero-lede reveal">Enfocado en crear soluciones con una fuerte base en arquitectura, buenas prácticas y código limpio.</p>
+      <div class="hero-cta reveal">
+        <a href="#proyectos" class="btn btn-solid">Ver proyectos</a>
+        <a href="#contacto" class="btn btn-outline">Contactame</a>
+      </div>
+    </section>
 
-        <section class="section-contacto" id="contacto">
-            <div class="titulos">
-                <i class="fa-solid fa-envelope"></i> 
-                <h1>Contacto</h1>
+    <!-- ACERCA DE MI -->
+    <section class="section" id="acerca-de-mi">
+      <div class="spec-header reveal">
+        <span>Acerca de mí</span>
+        <span class="stat">Desarrollador &amp; más</span>
+      </div>
+
+      <div class="sobre-mi reveal">
+        <img src="./assets/imagen-perfil.jpg" alt="Foto de Jonatan A. Rodríguez" class="sobre-mi-foto">
+        <diIT class="sobre-mi-texto">
+          <p>Soy un desarrollador de software orientado principalmente en el desarrollo backend y el diseño de arquitecturas mantenibles y escalables. Me interesa comprender cómo se estructuran las aplicaciones y buscar soluciones que prioricen la claridad, la calidad y la evolución del software.</p>
+          <!--
+          <p>Empecé en programación a mediados de 2023, primero con cursos en Coursera y YouTube, y después formalicé mi formación en la Tecnicatura en Desarrollo de Software del IFTS N°29.</p>
+          <p>Sigo capacitándome por mi cuenta (Udemy, Maxiprograma, en la web en general) y trato de aplicar todo en proyectos que tengan un valor real.</p>
+        -->
+          <p>Me gusta trabajar en equipo, creo que en la experiencia de trabajar con otros hay un gran valor de crecimiento personal que solo se adquiere a través de la colaboración.</p>
+          <p>Las tecnologías que más me atraen son: Java y Spring Boot, aunque no son las únicas con las que he trabajado. Tengo buena capacidad para adaptarme.</p>
+          <p>Fuera del mundo It: toco varios instrumentos musicales y compongo canciones. Tambien soy de leer libros, sobre todo novelas y clasicos, aunque tambien dedico tiempo a libros IT, algunos que he leido son Clean Code y Clean Architecture, de Robert C. Martin. </p>
+        </diIT
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA LABORAL -->
+    <!-- 
+    <section class="section" id="experiencia-laboral">
+      <div class="spec-header reveal">
+        <span>Experiencia Laboral</span>
+      </div>
+    </section> 
+    -->
+
+    <!-- PROYECTOS -->
+    <section class="section" id="proyectos">
+      <div class="spec-header reveal">
+        <span>Proyectos</span>
+        <span class="stat">2 activos</span>
+      </div>
+
+      <article class="proyecto reveal">
+        <div class="proyecto-texto">
+          <span class="proyecto-tag">En desarrollo — versión alfa</span>
+          <h2>Gestor de gastos compartidos</h2>
+          <p>Aplicación web orientada a la gestión integral de un hogar, permitiendo registrar, clasificar y analizar los distintos gastos de manera organizada y transparente.</p>
+          <p>El sistema realiza los cálculos necesarios para distribuir los gastos entre los distintos miembros del hogar, facilitando una administración equitativa y automatizada.</p>
+          <p>El backend está diseñado bajo una arquitectura de microservicios, donde uno se encarga del servicio de clasificación y el otro de la distribución de los gastos, promoviendo escalabilidad y mantenimiento independiente.</p>
+
+          <ul class="proyecto-tags">
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>React</li>
+          </ul>
+
+          <a href="https://github.com/JonRodCode/DistribuidorDeGastos" target="_blank" rel="noopener" class="microservicio-link">
+            <i class="fa-solid fa-diagram-project"></i> Microservicio: Distribuidor de Gastos <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <ul class="proyecto-galeria proyecto1">
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura.JPG" alt="Gestor de gastos compartidos — captura 1" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura1.JPG" alt="Gestor de gastos compartidos — captura 2" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura2.JPG" alt="Gestor de gastos compartidos — captura 3" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura3.JPG" alt="Gestor de gastos compartidos — captura 4" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura4.0.JPG" alt="Gestor de gastos compartidos — captura 5" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura5.JPG" alt="Gestor de gastos compartidos — captura 6" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura6.JPG" alt="Gestor de gastos compartidos — captura 7" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura7.JPG" alt="Gestor de gastos compartidos — captura 8" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura8.JPG" alt="Gestor de gastos compartidos — captura 9" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura9.JPG" alt="Gestor de gastos compartidos — captura 10" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura10.JPG" alt="Gestor de gastos compartidos — captura 11" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura11.JPG" alt="Gestor de gastos compartidos — captura 12" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura12.JPG" alt="Gestor de gastos compartidos — captura 13" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura13.JPG" alt="Gestor de gastos compartidos — captura 14" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura14.JPG" alt="Gestor de gastos compartidos — captura 15" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura15.JPG" alt="Gestor de gastos compartidos — captura 16" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura16.JPG" alt="Gestor de gastos compartidos — captura 17" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura17.JPG" alt="Gestor de gastos compartidos — captura 18" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura18.png" alt="Gestor de gastos compartidos — captura 19" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura19.JPG" alt="Gestor de gastos compartidos — captura 20" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura20.png" alt="Gestor de gastos compartidos — captura 21" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura21.JPG" alt="Gestor de gastos compartidos — captura 22" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura22.JPG" alt="Gestor de gastos compartidos — captura 23" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura23.JPG" alt="Gestor de gastos compartidos — captura 24" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura24.JPG" alt="Gestor de gastos compartidos — captura 25" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura25.JPG" alt="Gestor de gastos compartidos — captura 26" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Gestor-de-gastos-compartidos/Captura26.JPG" alt="Gestor de gastos compartidos — captura 27" loading="lazy" decoding="async"></li>
+        </ul>
+      </article>
+
+      <article class="proyecto reveal">
+        <div class="proyecto-texto">
+          <span class="proyecto-tag">Gestión de flota</span>
+          <h2>Administrador de vehículos</h2>
+          <p>Aplicación web desarrollada para administrar y gestionar de manera eficiente una flota de vehículos, facilitando el control de su uso, mantenimiento y disponibilidad.</p>
+          <p>Incluye funcionalidades de tipo CRUD para el registro, edición y seguimiento de los servicios, reparaciones y usos de cada vehículo.</p>
+          <p>La información se almacena de forma segura mediante una base de datos alojada en la nube.</p>
+
+          <ul class="proyecto-tags">
+            <li>C#</li>
+            <li>.NET</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+
+        <ul class="proyecto-galeria proyecto2">
+          <li><img src="./assets/Administrador-de-vehiculos/Captura.JPG" alt="Administrador de vehículos — captura 1" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Administrador-de-vehiculos/Captura1.JPG" alt="Administrador de vehículos — captura 2" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Administrador-de-vehiculos/Captura2.JPG" alt="Administrador de vehículos — captura 3" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Administrador-de-vehiculos/Captura3.JPG" alt="Administrador de vehículos — captura 4" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Administrador-de-vehiculos/Captura4.0.JPG" alt="Administrador de vehículos — captura 5" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Administrador-de-vehiculos/Captura4.5.JPG" alt="Administrador de vehículos — captura 6" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Administrador-de-vehiculos/Captura5.JPG" alt="Administrador de vehículos — captura 7" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Administrador-de-vehiculos/Captura6.JPG" alt="Administrador de vehículos — captura 8" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Administrador-de-vehiculos/Captura7.JPG" alt="Administrador de vehículos — captura 9" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Administrador-de-vehiculos/Captura8.JPG" alt="Administrador de vehículos — captura 10" loading="lazy" decoding="async"></li>
+          <li><img src="./assets/Administrador-de-vehiculos/Captura9.JPG" alt="Administrador de vehículos — captura 11" loading="lazy" decoding="async"></li>
+        </ul>
+      </article>
+
+      <a href="https://github.com/JonRodCode" target="_blank" rel="noopener" class="mas-proyectos reveal">
+        <span>Más proyectos y experimentos en GitHub</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <div class="visualizador" id="visualizador" aria-hidden="true">
+        <button type="button" class="cerrar" aria-label="Cerrar visualizador"><i class="fa-solid fa-xmark"></i></button>
+        <button type="button" class="flecha flecha-izq" aria-label="Imagen anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <figure class="visualizador-figure">
+          <img class="imagen-grande" src="" alt="">
+          <figcaption class="contador"></figcaption>
+        </figure>
+        <button type="button" class="flecha flecha-der" aria-label="Imagen siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+      <!-- HABILIDADES -->
+    <section class="section" id="stack">
+      <div class="spec-header reveal">
+        <span>Stack</span>
+        <span class="stat">11 tecnologías</span>
+      </div>
+
+      <div class="stack-grid reveal">
+        <div class="stack-grupo">
+          <h3>Lenguajes y Frameworks</h3>
+          <ul>
+            <li><img src="./assets/tecnologias/java.png" alt="" loading="lazy"><span>Java</span></li>
+            <li><img src="./assets/tecnologias/springboot.png" alt="" loading="lazy"><span>Spring Boot</span></li>
+            <li><img src="./assets/tecnologias/csharp.png" alt="" loading="lazy"><span>C#</span></li>
+            <li><img src="./assets/tecnologias/net.png" alt="" loading="lazy"><span>.NET</span></li>
+            <li><img src="./assets/tecnologias/python.png" alt="" loading="lazy"><span>Python</span></li>
+            <li><img src="./assets/tecnologias/html.png" alt="" loading="lazy"><span>Html</span></li>
+            <li><img src="./assets/tecnologias/css.png" alt="" loading="lazy"><span>Css</span></li>
+            <li><img src="./assets/tecnologias/javascript.png" alt="" loading="lazy"><span>JavaScript</span></li>
+            <li><img src="./assets/tecnologias/react.png" alt="" loading="lazy"><span>React</span></li>
+          </ul>
+        </div>
+        <div class="stack-grupo">
+          <h3>Datos y Herramientas</h3>
+          <ul>
+            <li><img src="./assets/tecnologias/sql.png" alt="" loading="lazy"><span>Bases de datos</span></li>
+            <li><img src="./assets/tecnologias/mongo2.png" alt="" loading="lazy"><span>MongoDB</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+      <div class="contacto-inner">
+        <div class="spec-header spec-header-invertido reveal">
+          <span>Contacto</span>
+          <span class="stat">Vía formulario o redes</span>
+        </div>
+
+        <h2 class="contacto-titulo reveal">¿Trabajamos<br>juntos?</h2>
+
+        <div class="contacto-grid reveal">
+          <form action="" class="contacto-formulario">
+            <div class="campo">
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required>
             </div>
-            <div>
-                <form action="" class="contacto-formulario">
-                    <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre" required>
-                    <input type="email" name="email" id="email" placeholder="Tu Email" required>
-                    <textarea rows="5" name="mensaje" id="mensaje" placeholder="Tu Mensaje" required></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
+            <div class="campo">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="tu@email.com" required>
             </div>
-        </section>
-    </main>
+            <div class="campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea rows="4" name="mensaje" id="mensaje" placeholder="Contame en qué puedo ayudarte" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-amber">Enviar mensaje</button>
+          </form>
+
+          <div class="contacto-socials">
+            <a href="https://github.com/JonRodCode" target="_blank" rel="noopener">
+              <span>GitHub</span><i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jona-tan-alexis-rodriguez" target="_blank" rel="noopener">
+              <span>LinkedIn</span><i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Jonatan A. Rodríguez — <span id="anio"></span></span>
+    <a href="#inicio">Volver arriba ↑</a>
+  </footer>
+
+  <script src="./scripts/main.js" defer></script>
+  <script src="./scripts/visualizador.js" defer></script>
 </body>
 </html>
