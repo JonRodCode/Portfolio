@@ -58,13 +58,28 @@
 
     <!-- HERO -->
     <section class="hero" id="inicio">
-      <p class="hero-eyebrow reveal">Diseño · Arquitectura · Código</p>
-      <h1 class="hero-name reveal">Jonatan A. Rodriguez</h1>
-      <h2 class="hero-rol reveal">Desarrollador de Software</h2>
-      <p class="hero-lede reveal">Enfocado en crear soluciones con una fuerte base en arquitectura, buenas prácticas y código limpio.</p>
-      <div class="hero-cta reveal">
-        <a href="#proyectos" class="btn btn-solid">Ver proyectos</a>
-        <a href="#contacto" class="btn btn-outline">Contactame</a>
+      <div class="hero-texto">
+        <p class="hero-eyebrow reveal">Diseño · Arquitectura · Código</p>
+        <h1 class="hero-name reveal">Jonatan A. Rodriguez</h1>
+        <h2 class="hero-rol reveal">Desarrollador de Software</h2>
+        <p class="hero-lede reveal">Enfocado en crear soluciones con una fuerte base en arquitectura, buenas prácticas y código limpio.</p>
+        <div class="hero-cta reveal">
+          <a href="#proyectos" class="btn btn-solid">Ver proyectos</a>
+          <a href="#contacto" class="btn btn-outline">Contactame</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="code-window">
+          <div class="code-window-bar"><span></span><span></span><span></span></div>
+          <pre class="code-window-body"><code><span class="tok-kw">public</span> <span class="tok-kw">interface</span> <span class="tok-type">GastoService</span> {
+
+    <span class="tok-kw">void</span> <span class="tok-fn">distribuir</span>(<span class="tok-type">List</span>&lt;<span class="tok-type">Gasto</span>&gt; gastos);
+
+    <span class="tok-comment">// arquitectura limpia,</span>
+    <span class="tok-comment">// código mantenible</span>
+}</code></pre>
+        </div>
       </div>
     </section>
 
@@ -80,7 +95,7 @@
 
       <div class="sobre-mi reveal">
         <img src="./assets/imagen-perfil.jpg" alt="Foto de Jonatan A. Rodríguez" class="sobre-mi-foto">
-        <diIT class="sobre-mi-texto">
+        <div class="sobre-mi-texto">
           <p>Soy un desarrollador de software orientado principalmente en el desarrollo backend y el diseño de arquitecturas mantenibles y escalables. Me interesa comprender cómo se estructuran las aplicaciones y buscar soluciones que prioricen la claridad, la calidad y la evolución del software.</p>
           <!--
           <p>Empecé en programación a mediados de 2023, primero con cursos en Coursera y YouTube, y después formalicé mi formación en la Tecnicatura en Desarrollo de Software del IFTS N°29.</p>
@@ -89,7 +104,7 @@
           <p>Me gusta trabajar en equipo, creo que en la experiencia de trabajar con otros hay un gran valor de crecimiento personal que solo se adquiere a través de la colaboración.</p>
           <p>Las tecnologías que más me atraen son: Java y Spring Boot, aunque no son las únicas con las que he trabajado. Tengo buena capacidad para adaptarme.</p>
           <p>Fuera del mundo It: toco varios instrumentos musicales y compongo canciones. Tambien soy de leer libros, sobre todo novelas y clasicos, aunque tambien dedico tiempo a libros IT, algunos que he leido son Clean Code y Clean Architecture, de Robert C. Martin. </p>
-        </diIT
+        </div>
       </div>
     </section>
 
@@ -154,23 +169,65 @@
       </div>
 
       <article class="proyecto reveal">
-        <div class="proyecto-texto">
-          <span class="proyecto-tag">En desarrollo — versión alfa</span>
-          <h2>Gestor de gastos compartidos</h2>
-          <p>Aplicación web orientada a la gestión integral de un hogar, permitiendo registrar, clasificar y analizar los distintos gastos de manera organizada y transparente.</p>
-          <p>El sistema realiza los cálculos necesarios para distribuir los gastos entre los distintos miembros del hogar, facilitando una administración equitativa y automatizada.</p>
-          <p>El backend está diseñado bajo una arquitectura de microservicios, donde uno se encarga del servicio de clasificación y el otro de la distribución de los gastos, promoviendo escalabilidad y mantenimiento independiente.</p>
+        <div class="proyecto-grid">
+          <div class="proyecto-texto">
+            <span class="proyecto-tag">En desarrollo — versión alfa</span>
+            <h2>Gestor de gastos compartidos</h2>
+            <p>Aplicación web orientada a la gestión integral de un hogar, permitiendo registrar, clasificar y analizar los distintos gastos de manera organizada y transparente.</p>
+            <p>El sistema realiza los cálculos necesarios para distribuir los gastos entre los distintos miembros del hogar, facilitando una administración equitativa y automatizada.</p>
+            <p>El backend está diseñado bajo una arquitectura de microservicios, entre ellos encontramos:</p>
+            <ul class="proyecto-microservicios">
+              <li>
+                <a href="https://jonrodcode.github.io/Distribuidor-de-Gastos-DEMO/" target="_blank" rel="noopener" class="microservicio-link">
+                  <i class="fa-solid fa-diagram-project"></i>
+                  <span>Distribuidor de Gastos</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/JonRodCode/DistribuidorDeGastos" target="_blank" rel="noopener" class="microservicio-github" aria-label="Ver repositorio de Distribuidor de Gastos en GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <span class="microservicio-link microservicio-pendiente">
+                  <i class="fa-solid fa-diagram-project"></i>
+                  <span>Clasificador de Gastos</span>
+                  <span class="microservicio-tag">Próximamente</span>
+                </span>
+                <a href="https://github.com/JonRodCode/ClasificadorDeGastos" target="_blank" rel="noopener" class="microservicio-github" aria-label="Ver repositorio de Distribuidor de Gastos en GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
+            </ul>
+            <p>El frontend fue diseñado con un enfoque específicamente funcional para obtener rapidamente una primera versión de la aplicación.</p>
+          </div>
 
-          <ul class="proyecto-tags">
-            <li>Java</li>
-            <li>Spring Boot</li>
-            <li>React</li>
-            <li>Docker</li>
-          </ul>
-
-          <a href="https://github.com/JonRodCode/DistribuidorDeGastos" target="_blank" rel="noopener" class="microservicio-link">
-            <i class="fa-solid fa-diagram-project"></i> Microservicio: Distribuidor de Gastos <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
+          <aside class="proyecto-ficha">
+            <h3>Ficha técnica</h3>
+            <dl>
+              <div class="proyecto-ficha-item">
+                <dt>Arquitectura</dt>
+                <dd>Microservicios</dd>
+              </div>
+              <div class="proyecto-ficha-item">
+                <dt>Stack principal</dt>
+                <dd>
+                  <ul class="proyecto-tags">
+                    <li>Java</li>
+                    <li>Spring Boot</li>
+                    <li>React</li>
+                    <li>Docker</li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="proyecto-ficha-item">
+                <dt>Desliegue</dt>
+                <dd>Parcialmente en <a href="https://render.com/" target="_blank" rel="noopener" >
+                    Render.com
+                  </a>
+                </dd>
+              </div>
+            </dl>
+          </aside>
         </div>
 
         <ul class="proyecto-galeria proyecto1">
@@ -205,18 +262,42 @@
       </article>
 
       <article class="proyecto reveal">
-        <div class="proyecto-texto">
-          <span class="proyecto-tag">Gestión de flota</span>
-          <h2>Administrador de vehículos</h2>
-          <p>Aplicación web desarrollada para administrar y gestionar de manera eficiente una flota de vehículos, facilitando el control de su uso, mantenimiento y disponibilidad.</p>
-          <p>Incluye funcionalidades de tipo CRUD para el registro, edición y seguimiento de los servicios, reparaciones y usos de cada vehículo.</p>
-          <p>La información se almacena de forma segura mediante una base de datos alojada en la nube.</p>
+        <div class="proyecto-grid">
+          <div class="proyecto-texto">
+            <span class="proyecto-tag">Gestión de flota</span>
+            <h2>Administrador de vehículos</h2>
+            <p>Aplicación web desarrollada para administrar y gestionar de manera eficiente una flota de vehículos, facilitando el control de su uso, mantenimiento y disponibilidad.</p>
+            <p>Incluye funcionalidades de tipo CRUD para el registro, edición y seguimiento de los servicios, reparaciones y usos de cada vehículo.</p>
+            <p>La información se almacena de forma segura mediante una base de datos alojada en la nube.</p>
+          </div>
 
-          <ul class="proyecto-tags">
-            <li>C#</li>
-            <li>.NET</li>
-            <li>MongoDB</li>
-          </ul>
+          <aside class="proyecto-ficha">
+            <h3>Ficha técnica</h3>
+            <dl>
+              <div class="proyecto-ficha-item">
+                <dt>Tipo</dt>
+                <dd>Aplicación web (CRUD)</dd>
+              </div>
+              <div class="proyecto-ficha-item">
+                <dt>Stack principal</dt>
+                <dd>
+                  <ul class="proyecto-tags">
+                    <li>C#</li>
+                    <li>.NET</li>
+                    <li>MongoDB</li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="proyecto-ficha-item">
+                <dt>Desliegue</dt>
+                <dd>
+                  <a href="https://somee.com/" target="_blank" rel="noopener" >
+                    Somee.com
+                  </a>
+                </dd>                
+              </div>
+            </dl>
+          </aside>
         </div>
 
         <ul class="proyecto-galeria proyecto2">
@@ -261,8 +342,6 @@
         </div>
           <span class="stat">Vía formulario o redes</span>
         </div>
-
-        <h2 class="contacto-titulo reveal">¿Trabajamos<br>juntos?</h2>
 
         <div class="contacto-grid reveal">
           <form action="" class="contacto-formulario">

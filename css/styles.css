@@ -195,10 +195,52 @@ p { color: var(--texto-suave); }
    HERO — tamaño moderado, no cartel gigante
 ============================================================ */
 .hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 40px;
     padding: 90px 6% 70px;
     max-width: var(--maxw);
     margin: 0 auto;
 }
+
+.hero-visual { display: flex; justify-content: center; }
+
+.code-window {
+    width: 100%;
+    max-width: 380px;
+    background: var(--superficie);
+    border: 1px solid rgba(111, 155, 216, 0.35);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(7, 19, 124, 0.35);
+}
+.code-window-bar {
+    display: flex;
+    gap: 6px;
+    padding: 12px 14px;
+    background: rgba(111, 155, 216, 0.08);
+    border-bottom: 1px solid rgba(111, 155, 216, 0.18);
+}
+.code-window-bar span { width: 10px; height: 10px; border-radius: 50%; background: var(--texto-tenue); }
+.code-window-bar span:nth-child(1) { background: #ff5f56; }
+.code-window-bar span:nth-child(2) { background: #ffbd2e; }
+.code-window-bar span:nth-child(3) { background: #27c93f; }
+
+.code-window-body {
+    margin: 0;
+    padding: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    line-height: 1.7;
+    overflow-x: auto;
+    color: var(--texto-suave);
+    white-space: pre;
+}
+.code-window-body .tok-kw { color: var(--indigo); }
+.code-window-body .tok-type { color: var(--cian); }
+.code-window-body .tok-fn { color: var(--texto); }
+.code-window-body .tok-comment { color: var(--texto-tenue); font-style: italic; }
 
 .hero-eyebrow {
     font-family: var(--font-mono);
@@ -248,13 +290,13 @@ p { color: var(--texto-suave); }
     padding-top: 16px;
     margin-bottom: 52px;
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--texto-tenue);
 }
 .spec-header-item {
-    font-size: 0.95rem;
+    font-size: 1.15rem;
     color: var(--cian);
     letter-spacing: 0.02em;
 }
@@ -272,7 +314,38 @@ p { color: var(--texto-suave); }
 }
 .proyecto:last-of-type { border-bottom: none; }
 
-.proyecto-texto { max-width: 640px; }
+.proyecto-grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 32px;
+    align-items: start;
+}
+
+.proyecto-ficha {
+    background: var(--superficie);
+    border: 1px solid rgba(111, 155, 216, 0.3);
+    border-radius: var(--radius-md);
+    padding: 22px;
+}
+.proyecto-ficha h3 {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cian);
+    margin-bottom: 16px;
+}
+.proyecto-ficha-item + .proyecto-ficha-item { margin-top: 16px; }
+.proyecto-ficha-item dt {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--texto-tenue);
+    margin-bottom: 6px;
+}
+.proyecto-ficha-item dd { font-size: 0.92rem; color: var(--texto-suave); }
+.proyecto-ficha-item dd .proyecto-tags { margin-top: 0; }
 
 .proyecto-tag {
     display: inline-block;
@@ -307,19 +380,63 @@ p { color: var(--texto-suave); }
     color: var(--texto-suave);
 }
 
+.proyecto-microservicios {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 14px 0;
+}
+.proyecto-microservicios li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 14px;
+    border: 1px solid rgba(111, 155, 216, 0.18);
+    border-radius: 10px;
+}
+
 .microservicio-link {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin-top: 18px;
     font-family: var(--font-mono);
     font-size: 0.85rem;
     color: var(--indigo);
     border-bottom: 1px solid transparent;
-    transition: border-color var(--transicion);
+    transition: border-color var(--transicion), color var(--transicion);
 }
 .microservicio-link:hover { border-color: var(--indigo); color: var(--cian); }
 .microservicio-link i:last-child { font-size: 0.65rem; }
+
+.microservicio-github {
+    display: inline-flex;
+    align-items: center;
+    color: var(--texto-suave);
+    font-size: 1rem;
+    transition: color var(--transicion);
+}
+.microservicio-github:hover { color: var(--cian); }
+
+.microservicio-pendiente { color: var(--texto-suave); cursor: default; }
+.microservicio-pendiente:hover { color: var(--texto-suave); }
+
+.microservicio-tag {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--texto-suave);
+    border: 1px solid rgba(111, 155, 216, 0.3);
+    border-radius: 20px;
+    padding: 3px 9px;
+    white-space: nowrap;
+}
+
+.proyecto-microservicios .fa-github{
+    font-size: 1.45rem;
+}
 
 .proyecto-galeria {
     list-style: none;
@@ -341,6 +458,8 @@ p { color: var(--texto-suave); }
     transition: transform var(--transicion), border-color var(--transicion);
 }
 .proyecto-galeria img:hover { transform: translateY(-3px); border-color: var(--cian); }
+
+#proyectos { padding-bottom: 48px; }
 
 .mas-proyectos {
     display: flex;
@@ -456,8 +575,7 @@ p { color: var(--texto-suave); }
    CONTACTO
 ============================================================ */
 .contacto {
-    padding: 80px 6% 90px;
-    margin-top: 20px;
+    padding: 40px 6% 90px;
 }
 .contacto-inner {
     max-width: var(--maxw);
@@ -544,6 +662,16 @@ p { color: var(--texto-suave); }
     .sobre-mi-foto { max-width: 220px; }
     .contacto-grid { grid-template-columns: 1fr; gap: 40px; }
     .contacto-inner { padding: 40px 28px; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-texto { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .code-window { max-width: 320px; }
+    .proyecto-grid { grid-template-columns: 1fr; }
+    .spec-header-item { font-size: 0.9rem; }
+    .spec-header .stat { font-size: 0.8rem; }
+    .proyecto-texto p { margin-bottom: 7px; font-size: 0.9rem; }
+    .sobre-mi p { font-size: 0.9rem; margin-bottom: 9px; }
+    .hero-lede { font-size: 0.95rem; }
+    .hero-eyebrow { font-size: 0.8rem; }
 }
 
 @media (max-width: 760px) {
