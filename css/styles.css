@@ -253,7 +253,7 @@ p { color: var(--texto-suave); }
     letter-spacing: 0.06em;
     color: var(--texto-tenue);
 }
-.spec-header span:first-child {
+.spec-header-item {
     font-size: 0.95rem;
     color: var(--cian);
     letter-spacing: 0.02em;
@@ -430,7 +430,7 @@ p { color: var(--texto-suave); }
     gap: 10px; 
 }
 .stack-grupo li { 
-    font-size: 1.05rem; color: var(--texto);
+    font-size: 0.85rem; color: var(--texto);
     padding-block: 18px;
     border: solid 1px rgba(111, 155, 216, 0.3);    
     border-radius: var(--radius-sm);
