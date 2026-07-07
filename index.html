@@ -102,7 +102,7 @@
           <p>Sigo capacitándome por mi cuenta (Udemy, Maxiprograma, en la web en general) y trato de aplicar todo en proyectos que tengan un valor real.</p>
         -->
           <p>Me gusta trabajar en equipo, creo que en la experiencia de trabajar con otros hay un gran valor de crecimiento personal que solo se adquiere a través de la colaboración.</p>
-          <p>Las tecnologías que más me atraen son: Java y Spring Boot, aunque no son las únicas con las que he trabajado. Tengo buena capacidad para adaptarme.</p>
+          <p>Las tecnologías que más me atraen son: Java, Spring Boot, C# y .NET, aunque no son las únicas con las que he trabajado. Tengo buena capacidad para adaptarme.</p>
           <p>Fuera del mundo It: toco varios instrumentos musicales y compongo canciones. Tambien soy de leer libros, sobre todo novelas y clasicos, aunque tambien dedico tiempo a libros IT, algunos que he leido son Clean Code y Clean Architecture, de Robert C. Martin. </p>
         </div>
       </div>
@@ -214,6 +214,7 @@
                   <ul class="proyecto-tags">
                     <li>Java</li>
                     <li>Spring Boot</li>
+                    <li>JUnit</li>
                     <li>React</li>
                     <li>Docker</li>
                   </ul>
@@ -344,7 +345,7 @@
         </div>
 
         <div class="contacto-grid reveal">
-          <form action="" class="contacto-formulario">
+          <form onsubmit="enviarEmail(event)" class="contacto-formulario" id="contactForm">
             <div class="campo">
               <label for="nombre">Nombre</label>
               <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required>
@@ -354,10 +355,16 @@
               <input type="email" name="email" id="email" placeholder="tu@email.com" required>
             </div>
             <div class="campo">
+              <label for="asunto">Asunto</label>
+              <input type="text" name="asunto" id="asunto" placeholder="Asunto del mensaje" required>
+            </div>
+            <div class="campo">
               <label for="mensaje">Mensaje</label>
               <textarea rows="4" name="mensaje" id="mensaje" placeholder="Contame en qué puedo ayudarte" required></textarea>
             </div>
+            <input type="text" name="_gotcha" style="display:none" />
             <button type="submit" class="btn btn-amber">Enviar mensaje</button>
+            <p id="formStatus"></p>
           </form>
 
           <div class="contacto-socials">

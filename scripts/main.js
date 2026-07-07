@@ -45,3 +45,40 @@ if (!prefiereMenosMovimiento && 'IntersectionObserver' in window) {
 } else {
   document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
 }
+
+async function enviarEmail(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const status = document.getElementById('formStatus');
+  const data = new FormData(form);
+  const email = data.get('email');
+  const asunto = data.get('asunto');
+
+  if (!emailValido(email)) {
+    status.textContent = 'Por favor ingresá un email válido.';
+    return;
+  }
+
+  try {
+    const response = await fetch('https://formspree.io/f/xvzjybnl', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      status.textContent = '¡Gracias! Tu mensaje fue enviado.';
+      form.reset();
+    } else {
+      status.textContent = 'Hubo un error. Intentá de nuevo.';
+    }
+  } catch (error) {
+    status.textContent = 'Hubo un error. Intentá de nuevo.';
+  }
+}
+
+function emailValido(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
