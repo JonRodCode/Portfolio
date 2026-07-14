@@ -271,7 +271,7 @@ p { color: var(--texto-suave); }
     margin-bottom: 30px;
 }
 
-.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap;  }
 
 /* ============================================================
    SECTION / SPEC HEADER
@@ -690,3 +690,9 @@ p { color: var(--texto-suave); }
     .proyecto-galeria img { width: 150px; }
     .sobre-mi { padding: 22px; }
 }
+
+@media (max-width: 456px) {
+    .hero-cta { flex-wrap: nowrap; gap: 12px; }
+    .hero-cta .btn {font-size: 0.72rem; }
+}
+
